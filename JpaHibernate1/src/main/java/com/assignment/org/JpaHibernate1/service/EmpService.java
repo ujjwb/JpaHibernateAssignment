@@ -46,9 +46,9 @@ public class EmpService {
         return (List<Employee>)repository.findAll(Sort.by(new Sort.Order(Sort.Direction.DESC,"name"),new Sort.Order(null,"age")));
     }
 
-    public List<Employee> showEmployeePaged(int pageNumber){
+    public Iterable<Employee> showEmployeePaged(int pageNumber){
         Pageable pageable=PageRequest.of(pageNumber,2,Sort.by("name"));
-        return (List<Employee>) repository.findAll(pageable);
+        return repository.findAll(pageable).stream().toList();
     }
 
     public List<Employee> showByNames(String name){

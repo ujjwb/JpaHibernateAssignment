@@ -22,8 +22,8 @@ public class EmpController {
         empService.addOne(employee);
     }
 
-    @DeleteMapping("/emps/{id})")
-    public void delEmployee(@PathVariable Integer id){
+    @DeleteMapping("/emps/{id}")
+    public void delEmployee(@PathVariable int id){
         empService.delOne(id);
     }
 
@@ -42,8 +42,8 @@ public class EmpController {
         return empService.showEmployeeSortedByNameAndAge();
     }
 
-    @GetMapping("/emps/paged")
-    public List<Employee> showPagedAndSorted(){
+    @GetMapping("/emps/page")
+    public Iterable<Employee> showPagedAndSorted(){
         return empService.showEmployeePaged(1);
     }
 

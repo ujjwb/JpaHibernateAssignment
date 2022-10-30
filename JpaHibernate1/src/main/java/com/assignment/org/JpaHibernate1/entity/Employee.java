@@ -8,11 +8,14 @@ public class Employee {
     @Column(name="emp_name")
     private String name;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Integer age;
     private String location;
 
+    public Employee(){
+        super();
+    }
     public Employee(String name,  Integer age, String location) {
         this.name = name;
         this.age = age;

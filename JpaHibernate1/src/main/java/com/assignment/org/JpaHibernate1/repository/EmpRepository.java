@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 
-public interface EmpRepository extends PagingAndSortingRepository {
+public interface EmpRepository extends PagingAndSortingRepository<Employee,Integer> {
 
     List<Employee> findByName(String Name);
     List<Employee> findByNameStartingWith(String Name);
