@@ -1,12 +1,13 @@
-package com.assignment.org.JpaHibernate1;
+package com.assignment.org.inheritance2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JpaHibernate1Application {
+public class InheritanceMapping2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JpaHibernate1Application.class, args);
+		SpringApplication.run(InheritanceMapping2Application.class, args);
 	}
+
 }
